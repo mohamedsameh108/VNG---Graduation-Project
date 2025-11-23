@@ -1,55 +1,49 @@
-# Thresholds for VNG Tests
+# ================================================================
+# Vestibular Function Test Thresholds (VNG)
+# ---------------------------------------------------------------
+# This YAML file defines the clinical threshold values used to 
+# interpret results from common Videonystagmography (VNG) tests.
 
 spontaneous_nystagmus:
   spv:
     limit: 6
-    type: "max"         # any value > 6 deg/s (DPS) will be abnormal
-    unit: "deg/s"
+    unit: "deg/s"       # any value > 6 deg/s (DPS) will be abnormal
   
   fixation_index:
     limit: 60
-    type: "max"         # any value > 60% will be abnormal
-    unit: "%"
+    unit: "%"           # any value > 60% will be abnormal
 
 gaze_evoked:
   spv:
     limit: 6
-    type: "max"
     unit: "deg/s"
 
 positional_and_positioning_tests:
   spv:
     limit: 6
-    type: "max"
     unit: "deg/s"
   
   latency:
     limit: 15
-    type: "max"         # any value > 15 will be normal case
-    unit: "s"
+    unit: "s"           # any value > 15 will be normal case
 
   duration:
     limit: 5
-    type: "min"         # any value < 5 will be normal case
-    unit: "s"
+    unit: "s"           # any value < 5 will be normal case
 
 caloric_test:
   canal_paresis:
     limit: 25
-    type: "max"         # CP > 25% is abnormal
-    unit: "%"
+    unit: "%"           # CP > 25% is abnormal
   
   directional_preponderance:
     limit: 25
-    type: "max"         # DP > 25% is abnormal
-    unit: "%"
+    unit: "%"           # DP > 25% is abnormal
   
   bilateral_weakness_total_spv:
     limit: 12
-    type: "min"         # Total SPV < 12 is abnormal
-    unit: "deg/s"
+    unit: "deg/s"       # Total SPV < 12 is abnormal
     
   hyperactivity_total_spv:
     limit: 140
-    type: "max"         # Total SPV > 140 is abnormal
-    unit: "deg/s"
+    unit: "deg/s"       # Total SPV > 140 is abnormal

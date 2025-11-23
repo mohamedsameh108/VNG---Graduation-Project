@@ -1,0 +1,50 @@
+# ================================================================
+# Vestibular Function Test Clincal Interpretation (VNG)
+# ---------------------------------------------------------------
+# This YAML file defines the clincal interpretation used to 
+# interpret results from common Videonystagmography (VNG) tests.
+
+spontaneous_nystagmus:
+  - rule_name: "Central Direction Check"
+    checks:
+      - parameter: "spv"
+        operator: "gt"
+        threshold: "limit" 
+      
+      - parameter: "direction"
+        operator: "in"
+        allowed_values: 
+          - "pure vertical"
+          - "pure torsional"
+    
+    result:
+      finding: "Spontaneous Vertical/Torsional Nystagmus"
+
+
+  - rule_name: "Peripheral Direction Check"
+    checks:
+      - parameter: "spv"
+        operator: "gt"
+        threshold: "limit"
+      
+      - parameter: "direction"
+        operator: "in"
+        allowed_values:
+          - "pure horizontal"
+          - "mixed horizontal and vertical"
+          - "mixed horizontal and torsional"
+          - "mixed vertical and torsional"
+          - "mixed horizontal and vertical and torsional"
+    
+    result:
+      finding: "Spontaneous Horizontal/Mixed Nystagmus"
+      
+
+  - rule_name: "Fixation Suppression Failure"
+    checks:
+      - parameter: "fixation_index"
+        operator: "gt"
+        threshold: "limit"
+    
+    result:
+      finding: "Failure of Fixation Suppression"
